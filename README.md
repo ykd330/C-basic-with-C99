@@ -7,7 +7,7 @@
 | 0501.LED_ON_LAB | LED On | GPIO Register 설정 |
 | 0601.TYPE_QUALIFIER_EX | 컴파일러 최적화에 의한 버그 방지 | Volatile 이해 |
 | 0602.CMSIS_LAB | 제조사의 CMSIS정의 정의 헤더파일 | CMSIS정의 |
-| 0701.BIT_OP_LAB | 비트연산으로 레지스터 제어 | **<<**, **>>**, **|**, **&** |
+| 0701.BIT_OP_LAB | 비트연산으로 레지스터 제어 | **`<<`**, **`>>`**, **`\|`**, **`&`** |
 | 0801.CLOCK_CONFIG_EX | 주변 장치를 활성화 시키기 위한 CLOCK 설정 | RCC Register 이해 |
 | 0901.KEY_IN_LAB | 내부 스위치(PC13)를 누르면 LED On | GPIOx->IDR, Pullup, Pulldown 저항 |
 | 0902.KEY_DRIVER_LAB | 내부 스위치를 이용한 LED Toggle 구현 | Interlock 방법 |
