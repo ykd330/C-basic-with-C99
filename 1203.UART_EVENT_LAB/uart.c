@@ -94,8 +94,11 @@ void Uart2_RX_Interrupt_Enable(int en)
 {
   if(en)
   {
+    Macro_Write_Block(USART2->CR1, 0x7, 0x1, 5);
 		// USART2 RX Interrupt Enable
+    NVIC_ClearPendingIRQ(38);
 		// NIVC Pending Clear
+    NVIC_EnableIRQ(38);
 		// NVIC Interrupt Enable
 
   }
