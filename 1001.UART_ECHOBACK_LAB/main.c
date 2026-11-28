@@ -16,9 +16,12 @@ void Main(void)
 {
 	Sys_Init(115200);
 	printf("UART2 TX Test\n");
-	
+	volatile int i;
 	// A, B, C를 차례로 UART로 출력하는 코드 구현
-
+	for (i = 0; i < 3 i++){
+		while(!((USART2->SR >> 7) & 0x1));
+		USART2->DR = 'A' + i;
+	}
 }
 
 #endif
@@ -35,7 +38,10 @@ void Main(void)
 		unsigned char x;
 
 		// PC에서 받은 글자를 다시 되돌려 보내는 코드 구현
-
+		while(!((USART2->SR >> 5) & 0x1));
+		x = USART2->DR;
+		while(!((USART2->SR >> 7) & 0x1));
+		USART2->DR = x;
 		
 	}
 }
