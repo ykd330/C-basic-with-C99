@@ -27,7 +27,7 @@ void Main(void)
 	for(;;)
 	{
 		GPIOA_ODR = 0x1 << 5; 
-		for(i=0; i<0x40000; i++);
+		for(i=0; i<0x40000; i++); // <- 컴파일러가 최적화 하면서 i = 0x40000으로 바뀜 - 작동 X
 		
 		GPIOA_ODR = 0x0 << 5; 
 		for(i=0; i<0x40000; i++);
