@@ -12,11 +12,11 @@
 | 0901.KEY_IN_LAB | 내부 스위치(PC13)를 누르면 LED On | GPIOx->IDR, Pullup, Pulldown 저항 |
 | 0902.KEY_DRIVER_LAB | 내부 스위치를 이용한 LED Toggle 구현 | Interlock 방법 |
 | 0903.KEY_CHATTERING_EX | 외부 스위치를 이용한 LED Toggle 구현 | Chattering정의 및 해결법 |
-| 1001.UART_ECHOBACK | 모터 속도 제어 | 타이머 PWM, 듀티비 |
-| 1002.UART_DRIVER_LAB | LED 점멸 | GPIO 출력 |
-| 1101.SYSTICK_TIMER_LAB | 버튼으로 LED 토글 | 외부 인터럽트, 디바운싱 |
-| 1103.TIMER_OUTPUT_LAB | PC와 문자 주고받기 | UART, 링 버퍼 |
-| 1201.EXTI_EVERNT_EX | 모터 속도 제어 | 타이머 PWM, 듀티비 |
+| 1001.UART_ECHOBACK | UART통신을 통한 문자 주고 받기 | UARTx->CR, SR 및 DR (RX, TX Buffer) |
+| 1002.UART_DRIVER_LAB | UART2통신을 위한 Init함수 설계 및 사용 | UART2->CR 설정 및 SR을 통한 Buffer 감시 |
+| 1101.SYSTICK_TIMER_LAB | SysTick 예제를 통한 타이머 이해 | Timer 이해 |
+| 1103.TIMER_OUTPUT_LAB | TIMx에 대한 이해와 이를 이용한 PWM 발생 및 버저 동작 | PSC(prescaler), CNT(count) - ARR, EGR, CCR, PWM |
+| 1201.EXTI_IRQ_LAB |  | 타이머 PWM, 듀티비 |
 | 1202.EXTI_EVENT_EX | LED 점멸 | GPIO 출력 |
 | 1203.UART_EVENT_LAB | 버튼으로 LED 토글 | 외부 인터럽트, 디바운싱 |
 | 1204.TIMER_EVENT_LAB | PC와 문자 주고받기 | UART, 링 버퍼 |
