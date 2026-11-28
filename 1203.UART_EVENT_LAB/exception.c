@@ -23,9 +23,12 @@ extern volatile int Uart_Data_In;
 extern volatile unsigned char Uart_Data;
 
 void USART2_IRQHandler(void)
-{
+{ 
 	// 수신된 데이터는 Uart_Data에 저장
+	Uart_Data = USART2->DR;
 	// Uart_Data_In Flag Setting
+	Uart_Data_In = 1;
 	// NVIC Pending Clear
+	NVIC_ClearPendingIRQ(38);
 
 }
